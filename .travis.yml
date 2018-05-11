@@ -1,0 +1,19 @@
+language: php
+
+env:
+  global:
+    - 'FTP_USER=gagasprastya65'
+    - 'FTP_PASS=gagas1997'
+
+
+script:
+  - "curl -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com -Q 'mkd public_html/UAS-4d'"
+  - "curl -T coba.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T main.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T tambah.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T hapus.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T simpan-baru.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T edit-form.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T koneksi.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  - "curl -T update.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/UAS-4d/"
+  
